@@ -4,3 +4,4 @@ dist/
 test-results/
 playwright-report/
 *.log
+postman/mocks/user-service/simulation-data.json
