@@ -13,7 +13,8 @@ const children = [
   }),
   spawn(process.execPath, ['node_modules/vite/bin/vite.js', '--host', '0.0.0.0', ...extraArgs], {
     cwd: root,
-    stdio: 'inherit'
+    stdio: 'inherit',
+    env: { ...process.env, API_PROXY_TARGET: process.env.API_PROXY_TARGET || 'http://localhost:4010' }
   })
 ];
 
